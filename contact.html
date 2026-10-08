@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Your Name</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="content-section container">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out regarding research collaborations, engineering roles, or consulting opportunities.</p>
+        <br>
+        
+        <p><strong>Email:</strong> <a href="mailto:youremail@vt.edu">youremail@vt.edu</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+        <br>
+        
+        <!-- Optional Form: Note that GitHub pages requires a service like Formspree to make HTML forms functional -->
+        <form action="https://formspree.io/f/your_form_id" method="POST" style="max-width: 500px;">
+            <label>Name</label>
+            <input type="text" name="name" required>
+            
+            <label>Email</label>
+            <input type="email" name="email" required>
+            
+            <label>Message</label>
+            <textarea name="message" rows="5" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</body>
+</html>
