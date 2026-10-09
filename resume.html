@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- v=5 ensures the browser loads the new Flexbox layout -->
+    <link rel="stylesheet" href="style.css?v=5"> 
 </head>
 <body>
     <header>
@@ -13,7 +14,19 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
+                    
+                    <!-- Dropdown Menu -->
+                    <li class="dropdown">
+                        <a href="index.html#projects">Projects &#9662;</a>
+                        <ul class="dropdown-content">
+                            <li><a href="chip-cooling.html">High-Heat-Flux Chip Cooling</a></li>
+                            <li><a href="battery-cooling.html">Battery Thermal Management</a></li>
+                            <li><a href="dbc-cooling.html">Water Jet-Impingement Cooling</a></li>
+                            <li><a href="valve-controller.html">Valve Controller Systems</a></li>
+                            <li><a href="mechanical-design.html">Mechanical Design & CAD</a></li>
+                        </ul>
+                    </li>
+                    
                     <li><a href="resume.html">Resume</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
