@@ -12,6 +12,11 @@
     padding: 0;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     font-family: var(--font-family);
     line-height: 1.6;
@@ -29,27 +34,34 @@ header {
     width: 85%;
     max-width: 1100px;
     margin: auto;
-    overflow: flow-root;
+}
+
+/* --- NEW FLEXBOX HEADER LAYOUT --- */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: visible; /* Prevents dropdown from clipping */
 }
 
 header h1 {
-    float: left;
-    margin-top: 0;
+    margin: 0;
 }
 
 nav {
-    float: right;
-    margin-top: 10px;
+    margin: 0;
 }
 
 nav ul {
     list-style: none;
+    display: flex;
+    align-items: center;
 }
 
 nav ul li {
-    display: inline;
     margin-left: 20px;
 }
+/* --------------------------------- */
 
 nav ul li a {
     color: #ffffff;
@@ -117,35 +129,11 @@ footer {
     margin-top: 3rem;
 }
 
-/* Forms */
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: var(--link-color);
-}
-
 /* Dropdown Menu Styles */
 .dropdown {
     position: relative;
-    display: inline-block;
 }
 
-/* Invisible bridge so the mouse doesn't fall off when moving down */
 .dropdown > a {
     padding-bottom: 20px; 
 }
@@ -153,7 +141,7 @@ button:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #002244; /* Slightly darker than header */
+    background-color: #002244;
     min-width: 260px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
     z-index: 100;
@@ -164,10 +152,9 @@ button:hover {
     overflow: hidden;
 }
 
-/* Overriding the inline block from the main nav */
 nav ul li.dropdown .dropdown-content li {
-    display: block;
     margin-left: 0;
+    width: 100%;
 }
 
 nav ul li.dropdown .dropdown-content li a {
@@ -183,7 +170,25 @@ nav ul li.dropdown .dropdown-content li a:hover {
     background-color: var(--link-color);
 }
 
-/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 850px) {
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 10px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 5px 15px;
+    }
+    .grid {
+        grid-template-columns: 1fr; /* Stacks project cards vertically */
+    }
 }
