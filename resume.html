@@ -3,14 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume | Portfolio</title>
-    <!-- v=5 ensures the browser loads the new Flexbox layout -->
-    <link rel="stylesheet" href="style.css?v=4"> 
+    <title>Resume | Timofey Biryukov</title>
+    <link rel="stylesheet" href="style.css?v=5">
+    <style>
+        /* Resume-specific layout enhancements */
+        .resume-header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        .resume-contact {
+            color: #555;
+            font-size: 0.95rem;
+            margin-top: 0.4rem;
+        }
+        .resume-contact a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+        .resume-section {
+            margin-bottom: 2.2rem;
+        }
+        .resume-section h3 {
+            color: var(--primary-color);
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .entry {
+            margin-bottom: 1.5rem;
+        }
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.2rem;
+        }
+        .entry-title {
+            font-weight: bold;
+            font-size: 1.05rem;
+        }
+        .entry-date {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        .entry-subtitle {
+            font-style: italic;
+            color: #444;
+            margin-bottom: 0.4rem;
+        }
+        .resume-list {
+            padding-left: 1.2rem;
+        }
+        .resume-list li {
+            margin-bottom: 0.35rem;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 0.5rem 1.5rem;
+            padding-left: 1.2rem;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Your Name</h1>
+            <h1>Timofey Biryukov</h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -35,32 +97,112 @@
     </header>
 
     <section class="content-section container">
-        <h2>Curriculum Vitae</h2>
-        <br>
-        
-        <h3>Education</h3>
-        <p><strong>Virginia Tech</strong><br>
-        Mechanical Engineering Coursework, Specializing in Thermal Management & Control Systems.</p>
-        <br>
-        
-        <h3>Experience</h3>
-        <p><strong>Graduate Research Assistant</strong> | <em>Power Electronics Materials, Modules and Manufacturing Laboratory</em></p>
-        <ul>
-            <li>Spearheaded research in transient dual interface measurements (TDIM) of SiC modules.</li>
-            <li>Contributed to multi-agency funded engineering projects (ARPA-E, ONR).</li>
-            <li>Drafted manuscripts for the Energy Conversion Congress and Exposition (ECCE).</li>
-            <li>Mentored high school STEM students during summer research programs on server cooling methodologies.</li>
-        </ul>
-        <br>
-        <p><strong>Previous Experience</strong></p>
-        <ul>
-            <li>Managed hardware maintenance, Shopify storefronts, and e-commerce inventory.</li>
-            <li>Provided technology sales and computer repair support.</li>
-        </ul>
-        <br>
-        
-        <!-- Optional: Provide a download link if you have a PDF version -->
-        <a href="your-resume.pdf" target="_blank" style="display:inline-block; margin-top:20px; background:var(--primary-color); color:white; padding:10px 20px; text-decoration:none; border-radius:4px;">Download PDF Resume</a>
+        <div class="resume-header">
+            <h2>Timofey Biryukov</h2>
+            <p class="resume-contact">
+                Vienna/Blacksburg, VA &nbsp;|&nbsp; 
+                <a href="mailto:timobiry@vt.edu">timobiry@vt.edu</a> &nbsp;|&nbsp; 
+                (240) 810-6855
+            </p>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="resume-section">
+            <h3>Education</h3>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">B.S. Mechanical Engineering &mdash; Virginia Tech, Blacksburg, VA</span>
+                    <span class="entry-date">May 2027</span>
+                </div>
+                <ul class="resume-list">
+                    <li>Relevant coursework: Fluid/Thermal Dynamics, Heat and Mass Transfer, Mechanical Design</li>
+                    <li>Design team lead on Naval Surface Warfare Center funded Senior Design project</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="resume-section">
+            <h3>Skills</h3>
+            <ul class="skills-grid">
+                <li>Microsoft Suite</li>
+                <li>Adobe Suite</li>
+                <li>MATLAB/Python</li>
+                <li>Problem Solving</li>
+                <li>3D Printing</li>
+                <li>Waveform Analysis</li>
+                <li>ANSYS Fluent</li>
+                <li>Technical Communication</li>
+                <li>CNC Programming</li>
+                <li>Proficiency in CAD (Inventor, Fusion, Solidworks)</li>
+            </ul>
+        </div>
+
+        <!-- WORK EXPERIENCE -->
+        <div class="resume-section">
+            <h3>Work Experience</h3>
+
+            <!-- Job 1 -->
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Undergraduate Research Assistant &mdash; Virginia Tech, Blacksburg</span>
+                    <span class="entry-date">Feb 2025 &ndash; Present</span>
+                </div>
+                <div class="entry-subtitle">Dr. Guo-Quan Lu's Power Electronics Materials, Modules, and Manufacturing Laboratory</div>
+                <ul class="resume-list">
+                    <li>Designed and experimentally validated a water jet-impingement cooling system for an Office of Naval Research sponsored project, using CFD simulations to optimize thermal and fluid flow performance under high heat flux conditions.</li>
+                    <li>Engineered experimental two-phase cooling system to characterize phase-change heat transfer limits and mitigate critical heat flux bottlenecks.</li>
+                    <li>Characterized SiC power module packaging with Transient Dual Interface Method testing in accordance with JEDEC standards, quantifying the junction-to-case thermal impedance.</li>
+                    <li>Conducted thermal characterization and reliability testing for wide-bandgap Silicon Carbide power electronic modules.</li>
+                    <li>Contributed to multiple peer-reviewed research papers on advanced packaging and electronics cooling, with a primary authorship digest underway for the 2027 IEEE Energy Conversion Congress and Exposition.</li>
+                    <li>Directed a STEM mentorship initiative, supervising high school and other undergraduate researchers in testbench design, data acquisition, and thermal engineering fundamentals.</li>
+                </ul>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Electronics Advisor &mdash; Best Buy, Vienna, VA</span>
+                    <span class="entry-date">Aug 2022 &ndash; Aug 2024</span>
+                </div>
+                <ul class="resume-list">
+                    <li>Provided technical support and basic computer repairs for retail customers, troubleshooting hardware and software issues.</li>
+                    <li>Exceeded $100k in monthly retail sales and successfully drove credit card enrollment targets.</li>
+                </ul>
+            </div>
+
+            <!-- Job 3 -->
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Product Content Specialist &mdash; Mervis Diamond Importers, Tysons, VA</span>
+                    <span class="entry-date">Oct 2022 &ndash; Oct 2023</span>
+                </div>
+                <ul class="resume-list">
+                    <li>Photographed and photoshopped high end jewelry for optimal consumer appeal.</li>
+                    <li>Managed online store presence and listings via Shopify and Excel spreadsheets.</li>
+                </ul>
+            </div>
+
+            <!-- Job 4 -->
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Small Business Owner &mdash; Tomorrow Devices, Vienna, VA</span>
+                    <span class="entry-date">June 2022 &ndash; Present</span>
+                </div>
+                <ul class="resume-list">
+                    <li>Produced specialized electronic equipment for local businesses, focusing on power-washing facilitation devices.</li>
+                    <li>Designed and assembled RF circuits, including component sourcing and end-to-end product development.</li>
+                    <li>Managed marketing efforts and customer relationships to drive satisfaction and repeat business.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Optional PDF Download Button (Works automatically if you upload "Biryukov Resume 2026.pdf" to your repository) -->
+        <a href="Biryukov Resume 2026.pdf" target="_blank" style="display:inline-block; margin-top:10px; background:var(--primary-color); color:white; padding:10px 20px; text-decoration:none; border-radius:4px; font-weight:bold;">Download PDF Resume</a>
     </section>
+
+    <footer>
+        <p>&copy; 2026 Timofey Biryukov. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
