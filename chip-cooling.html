@@ -3,8 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SiC Jet Impingement Cooling Architecture| Projects</title>
+    <title>Dual Jet-Impingement SiC Cooling | Timofey Biryukov</title>
     <link rel="stylesheet" href="style.css?v=5">
+    <style>
+        /* Portfolio Showcase Page Styles */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 2.5rem;
+        }
+        .metric-card {
+            background: var(--primary-color);
+            color: #ffffff;
+            padding: 1.4rem;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+        .metric-value {
+            font-size: 2.1rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .metric-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .showcase-section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .showcase-section:last-of-type {
+            border-bottom: none;
+        }
+        .showcase-section h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .two-col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            align-items: start;
+            margin-top: 1rem;
+        }
+        .figure-box {
+            background: var(--secondary-color);
+            padding: 1rem;
+            border-radius: 6px;
+            border: 1px solid #d8e0e8;
+            text-align: center;
+        }
+        .figure-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+            margin-bottom: 0.6rem;
+            background-color: #dde3ea;
+            min-height: 180px;
+            object-fit: contain;
+        }
+        .figure-caption {
+            font-size: 0.88rem;
+            color: #555;
+            font-style: italic;
+        }
+        .tech-list {
+            padding-left: 1.3rem;
+            margin-top: 0.8rem;
+        }
+        .tech-list li {
+            margin-bottom: 0.6rem;
+        }
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.2rem;
+            font-size: 0.95rem;
+        }
+        .results-table th, .results-table td {
+            padding: 12px 15px;
+            border: 1px solid #ccd6e0;
+            text-align: left;
+        }
+        .results-table th {
+            background-color: var(--primary-color);
+            color: #ffffff;
+        }
+        .results-table tr:nth-child(even) {
+            background-color: var(--secondary-color);
+        }
+        .formula-box {
+            background: var(--secondary-color);
+            border-left: 4px solid var(--primary-color);
+            padding: 0.8rem 1.2rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,11 +120,11 @@
                     <li class="dropdown">
                         <a href="index.html#projects">Projects &#9662;</a>
                         <ul class="dropdown-content">
-                            <li><a href="chip-cooling.html">SiC Jet Impingement Cooling Architecture</a></li>
-                            <li><a href="battery-cooling.html">NSWC Li-Ion Battery Thermal Management System</a></li>
-                            <li><a href="dbc-cooling.html">TDIM Junction-to-Case Thermal Impedance Measurement</a></li>
-                            <li><a href="valve-controller.html">RF Valve Activator</a></li>
-                            <li><a href="mechanical-design.html">2-Phase Cooling Expirements</a></li>
+                            <li><a href="chip-cooling.html">High-Heat-Flux Chip Cooling</a></li>
+                            <li><a href="battery-cooling.html">Battery Thermal Management</a></li>
+                            <li><a href="dbc-cooling.html">Water Jet-Impingement Cooling</a></li>
+                            <li><a href="valve-controller.html">Valve Controller Systems</a></li>
+                            <li><a href="mechanical-design.html">Mechanical Design & CAD</a></li>
                         </ul>
                     </li>
                     
@@ -35,27 +137,159 @@
 
     <div class="project-header">
         <div class="container">
-            <h2>SiC Jet Impingement Cooling Architecture</h2>
-            <p> Power Electronics Materials, Modules, and Manufacturing Laboratory</p>
+            <h2>Direct-to-Substrate Dual Jet Impingement for SiC Power Modules</h2>
+            <p>Double-Sided Liquid Cooling Architecture, ANSYS Fluent CFD &amp; Experimental TSEP Validation</p>
         </div>
     </div>
 
     <section class="content-section container">
-        <h3>Overview</h3>
-        <p>This project focuses on the development and implementation of direct-to-substrate jet impingement cooling architecture for Office of Naval Research Funded 1.2kV SiC Power Module Packaging.</p>
-        <br>
-        <h3>Key Contributions</h3>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-        <br>
-        <p><em>Add images of your experimental setups, Python data plots, or TDIM charts here.</em></p>
+        
+        <!-- Key Performance Metrics Banner -->
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <span class="metric-value">41%</span>
+                <span class="metric-label">Reduction in Thermal Resistance (0.164 vs. 0.278 K/W)</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-value">61&deg;C</span>
+                <span class="metric-label">Peak Junction Temp Drop at 250 W (103&deg;C vs. 164&deg;C)</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-value">586 W/cm&sup2;</span>
+                <span class="metric-label">Extrapolated Heat Flux Capacity at 150&deg;C Limit</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-value">&gt;2&times;</span>
+                <span class="metric-label">Localized Heat Transfer Coefficient at Hotspots</span>
+            </div>
+        </div>
+
+        <!-- 1. Overview & Architecture -->
+        <div class="showcase-section">
+            <h3>1. Project Overview &amp; Manifold Architecture</h3>
+            <p>
+                Increasing power density in medium-voltage (MV) Silicon Carbide (SiC) devices creates severe, localized heat fluxes that overwhelm conventional channel-flow cold plates. This project developed a dual-sided, direct-to-substrate jet-impingement (DJI) cooling system for a 3.3 kV / 100 A double-sided-cooled (DSC) SiC phase-leg module, eliminating both cold plates and thermal interface materials (TIMs).
+            </p>
+            <div class="two-col">
+                <div>
+                    <ul class="tech-list">
+                        <li><strong>Asymmetric Hotspot Targeting:</strong> The DSC module contains two SiC dies bonded by their drain sides to opposing substrates and linked vertically via source-side conductive posts, generating two distinct hotspots per exterior substrate.</li>
+                        <li><strong>Resin 3D-Printed Manifolds:</strong> Custom manifolds clamp directly onto opposing module substrates, routing fluid through a 7 mm inlet channel into two 1.75 mm diameter nozzles positioned at a 3.5 mm nozzle-to-substrate standoff (<em>H/D</em> = 2).</li>
+                        <li><strong>Symmetric Hydraulic Routing:</strong> Submerged jets impinge perpendicularly on the substrate hotspots, transition into radial wall jets, and exit upward through a central port—balancing pressure drop and minimizing wall-jet collision losses.</li>
+                    </ul>
+                </div>
+                <div class="figure-box">
+                    <img src="fig1-module-cross-section.png" alt="3.3 kV DSC SiC Power Module and Dual Jet Impingement Cross Section">
+                    <div class="figure-caption">Fig. 1: 3.3 kV/100 A DSC SiC phase-leg module and direct-to-substrate dual jet impingement cross-section.</div>
+                </div>
+            </div>
+            <div class="figure-box" style="margin-top: 1.5rem;">
+                <img src="fig2-manifold-comparison.png" alt="CAD Comparison: Channel Flow vs Dual Jet Impingement Manifold">
+                <div class="figure-caption">Fig. 2: CAD comparison between the 7 mm baseline channel-flow manifold (left) and the dual jet-impingement manifold (right).</div>
+            </div>
+        </div>
+
+        <!-- 2. CFD Simulation -->
+        <div class="showcase-section">
+            <h3>2. ANSYS Fluent CFD &amp; Thermal Simulation</h3>
+            <p>
+                Both the proposed DJI manifold and a conventional 7 mm channel-flow baseline were simulated in ANSYS Fluent under single-device (250 W) and dual-device (250 W per chip) heating conditions at a total flow rate of 2 L/min (1 L/min per side).
+            </p>
+            <ul class="tech-list">
+                <li><strong>Boundary Layer Disruption:</strong> High-velocity impinging jets disrupt the stagnation-zone thermal boundary layer, delivering more than twice the local convective heat transfer coefficient of channel flow directly over the semiconductor hotspots.</li>
+                <li><strong>35% Peak Temperature Rise Reduction:</strong> At 250 W dissipation, CFD predicted a peak junction temperature of 107&deg;C for DJI versus 164&deg;C for channel flow.</li>
+                <li><strong>Uniform Parallel Cooling:</strong> Because the jets cool each die in parallel, the DJI architecture eliminates the inlet-to-outlet thermal gradient typical of serial channel flow, reducing thermo-mechanical stress across the module.</li>
+            </ul>
+            <div class="two-col">
+                <div class="figure-box">
+                    <img src="fig4-htc-contours.png" alt="Boundary Layer Heat Transfer Coefficient Contours">
+                    <div class="figure-caption">Fig. 3: Surface heat transfer coefficient contours showing &gt;2&times; localized peak intensity under dual jet impingement (b) vs. channel flow (a).</div>
+                </div>
+                <div class="figure-box">
+                    <img src="fig5-cfd-temp-contours.png" alt="Simulated Junction Temperature Distribution">
+                    <div class="figure-caption">Fig. 4: Cross-sectional static temperature contours comparing channel flow (top) and DJI cooling (bottom) for single- and dual-chip heating.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Experimental Setup & Python Post-Processing -->
+        <div class="showcase-section">
+            <h3>3. Closed-Loop Hydraulic Test Bench &amp; Python TSEP Analysis</h3>
+            <div class="two-col">
+                <div>
+                    <p>
+                        A closed-loop hydraulic test rig was constructed using a positive displacement pump to circulate deionized water at a calibrated 1 L/min per manifold across heating loads from 25 W to 250 W.
+                    </p>
+                    <div class="formula-box">
+                        V<sub>f</sub>(T) = V<sub>f</sub>(T<sub>ref</sub>) + k(T &minus; T<sub>ref</sub>)
+                    </div>
+                    <ul class="tech-list">
+                        <li><strong>TSEP Sensing:</strong> Steady-state junction temperature was measured via the SiC body-diode forward voltage drop (<em>V<sub>f</sub></em>) as a Temperature-Sensitive Electrical Parameter (TSEP) using a fast-switching 50 mA sensing current.</li>
+                        <li><strong>Python Extrapolation Pipeline:</strong> A custom Python post-processing script filters out the initial 5 ms of electrical switching transients and extrapolates the linear root-mean-square time (&radic;<em>t</em>) cooling curve back to power interruption (<em>t</em> = 0).</li>
+                    </ul>
+                </div>
+                <div class="figure-box">
+                    <img src="fig6-test-bench.png" alt="Closed-Loop Hydraulic Test Bench">
+                    <div class="figure-caption">Fig. 5: Experimental closed-loop hydraulic test bench, TSEP heating control board, and data acquisition system.</div>
+                </div>
+            </div>
+            <div class="figure-box" style="margin-top: 1.5rem;">
+                <img src="fig7-python-tsep.png" alt="Python TSEP Extrapolation Curves">
+                <div class="figure-caption">Fig. 6: Automated Python post-processing of transient cooling curves (25 W to 250 W) against &radic;t to extrapolate steady-state junction temperature at t = 0.</div>
+            </div>
+        </div>
+
+        <!-- 4. Experimental Results -->
+        <div class="showcase-section">
+            <h3>4. Experimental Thermal Performance</h3>
+            <div class="two-col">
+                <div>
+                    <p>
+                        Experimental validation closely matched CFD predictions across the entire 25 W &ndash; 250 W operating envelope at 1 L/min per side, demonstrating substantial thermal headroom for high-power-density SiC packaging:
+                    </p>
+                    <table class="results-table">
+                        <thead>
+                            <tr>
+                                <th>Metric (at 250 W, 1 L/min per side)</th>
+                                <th>Channel Flow</th>
+                                <th>Dual Jet (DJI)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Measured Junction Temp (<em>T<sub>j</sub></em>)</strong></td>
+                                <td>164&deg;C</td>
+                                <td><strong>103&deg;C (&minus;61&deg;C)</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Simulated Junction Temp (CFD)</strong></td>
+                                <td>164&deg;C</td>
+                                <td><strong>107&deg;C</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Thermal Resistance (<em>R<sub>th,j-c</sub></em>)</strong></td>
+                                <td>0.278 K/W</td>
+                                <td><strong>0.164 K/W (&minus;41%)</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Linear Heating Slope (d<em>T<sub>j</sub></em> / d<em>P</em>)</strong></td>
+                                <td>0.581 &deg;C/W</td>
+                                <td><strong>0.352 &deg;C/W (&minus;40%)</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="figure-box">
+                    <img src="fig9-results-graph.png" alt="Junction Temperature vs Power Graph">
+                    <div class="figure-caption">Fig. 7: Measured junction temperature vs. dissipated power comparing conventional channel flow and Dual Jet Impingement (DJI).</div>
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <footer>
-        <p>&copy; 2026 Your Name. All Rights Reserved.</p>
+        <p>&copy; 2026 Timofey Biryukov. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
